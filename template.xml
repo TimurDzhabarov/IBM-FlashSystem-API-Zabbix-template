@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2023-10-16T08:59:11Z</date>
+    <groups>
+        <group>
+            <name>TEMPLATE</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>IBM FlashSystem 5000 API</template>
+            <name>IBM FlashSystem 5000 API</name>
+            <groups>
+                <group>
+                    <name>TEMPLATE</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Array</name>
+                </application>
+                <application>
+                    <name>Battarey</name>
+                </application>
+                <application>
+                    <name>Disk</name>
+                </application>
+                <application>
+                    <name>Enclosure</name>
+                </application>
+                <application>
+                    <name>Event log</name>
+                </application>
+                <application>
+                    <name>Fabric</name>
+                </application>
+                <application>
+                    <name>FC</name>
+                </application>
+                <application>
+                    <name>RAW</name>
+                </application>
+                <application>
+                    <name>VDisk</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>code_level</name>
+                    <type>DEPENDENT</type>
+                    <key>device.code_level</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.code_level</params>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>console_IP</name>
+                    <type>DEPENDENT</type>
+                    <key>device.console_IP</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.console_IP</params>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>id_alias</name>
+                    <type>DEPENDENT</type>
+                    <key>device.id_alias</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.id_alias</params>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>Device name</name>
+                    <type>DEPENDENT</type>
+                    <key>device.name</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.name</params>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>product_name</name>
+                    <type>DEPENDENT</type>
+                    <key>device.product_name</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.product_name</params>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>space allocated to vdisks</name>
+                    <type>DEPENDENT</type>
+                    <key>device.space_allocated_to_vdisks</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.space_allocated_to_vdisks</params>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>tier_capacity</name>
+                    <type>DEPENDENT</type>
+                    <key>device.tier_capacity</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.tiers.[3].tier_capacity</params>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>tier_free_capacity</name>
+                    <type>DEPENDENT</type>
+                    <key>device.tier_free_capacity</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.tiers.[3].tier_free_capacity</params>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>total_drive_raw_capacity</name>
+                    <type>DEPENDENT</type>
+                    <key>device.total_drive_raw_capacity</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.total_drive_raw_capacity</params>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>total_free_space</name>
+                    <type>DEPENDENT</type>
+                    <key>device.total_free_space</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.total_free_space</params>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>total mdisk capacity</name>
+                    <type>DEPENDENT</type>
+                    <key>device.total_mdisk_capacity</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.total_mdisk_capacity</params>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>total used capacity</name>
+                    <type>DEPENDENT</type>
+                    <key>device.total_used_capacity</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.total_used_capacity</params>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>test %</name>
+                    <type>CALCULATED</type>
+                    <key>free.space.percent</key>
+                    <delay>10m</delay>
+                    <history>30d</history>
+                    <trends>30d</trends>
+                    <params>100*last(//device.tier_capacity)/last(//device.tier_free_capacity)</params>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>LS Raw request</name>
+                    <type>EXTERNAL</type>
+                    <key>ibmflashsys.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    <delay>10m</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RAW</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>LS Array raw request</name>
+                    <type>EXTERNAL</type>
+                    <key>ibmflashsyslsarray.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    <delay>10m</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Array</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>LS Drive raw request</name>
+                    <type>EXTERNAL</type>
+                    <key>ibmflashsyslsdrive.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    <delay>10m</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Disk</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>LS Enclosure raw request</name>
+                    <type>EXTERNAL</type>
+                    <key>ibmflashsyslsenclo.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    <delay>10m</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Enclosure</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>LS Battarey raw request</name>
+                    <type>EXTERNAL</type>
+                    <key>ibmflashsyslsenclosurebattery.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    <delay>10m</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Battarey</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>LS Event Log</name>
+                    <type>EXTERNAL</type>
+                    <key>ibmflashsyslseventlog.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    <delay>10m</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Event log</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>LS Fabric raw request</name>
+                    <type>EXTERNAL</type>
+                    <key>ibmflashsyslsfabric.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    <delay>10m</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Fabric</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>LS FC raw request</name>
+                    <type>EXTERNAL</type>
+                    <key>ibmflashsyslsfcport.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    <delay>10m</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>FC</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>LS VDisk raw request</name>
+                    <type>EXTERNAL</type>
+                    <key>ibmflashsyslsvdisk.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    <delay>10m</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>VDisk</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Discovery arrays</name>
+                    <type>DEPENDENT</type>
+                    <key>discover.array</key>
+                    <delay>0</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#MDNAME} {#ID} raid status</name>
+                            <type>DEPENDENT</type>
+                            <key>array.raid_status[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>1d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <description>md group id: {#MDGRID}&#13;
+md group name: {#MDGRNAME}&#13;
+capacity: {#CAPACITY}&#13;
+raid level: {#RAIDLVL}&#13;
+redundancy: {#REDUNDANCY}&#13;
+strip size: {#STRIPSIZE}&#13;
+distributed: {#DISTRIBUTED}&#13;
+encrypted: {#ENCRYPT}</description>
+                            <applications>
+                                <application>
+                                    <name>Array</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].raid_status</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsarray.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;&quot;online&quot;</expression>
+                                    <name>{#MDNAME} {#ID}RAID STATUS IS NOT ONLINE</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#MDNAME} {#ID} status</name>
+                            <type>DEPENDENT</type>
+                            <key>array.status[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>1d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <description>md group id: {#MDGRID}&#13;
+md group name: {#MDGRNAME}&#13;
+capacity: {#CAPACITY}&#13;
+raid level: {#RAIDLVL}&#13;
+redundancy: {#REDUNDANCY}&#13;
+strip size: {#STRIPSIZE}&#13;
+distributed: {#DISTRIBUTED}&#13;
+encrypted: {#ENCRYPT}</description>
+                            <applications>
+                                <application>
+                                    <name>Array</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].status</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsarray.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;&quot;online&quot;</expression>
+                                    <name>{#MDNAME} {#ID}ARRAYSTATUS IS NOT ONLINE</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <master_item>
+                        <key>ibmflashsyslsarray.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Discovery battarey</name>
+                    <type>DEPENDENT</type>
+                    <key>discover.battarey</key>
+                    <delay>0</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Battarey {#ID} charging status</name>
+                            <type>DEPENDENT</type>
+                            <key>battarey.charging_status[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <description>enclosure id: {#ENCLOSUREID}&#13;
+canister id: {#CANISTERID}&#13;
+battarey slot: {#BATTAREYSLOT}</description>
+                            <applications>
+                                <application>
+                                    <name>Battarey</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].charging_status</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclosurebattery.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;&quot;charged&quot;</expression>
+                                    <name>Battarei id: {#ID} in enclosure: {#ENCLOSUREID} charging status changed</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Battarey {#ID} end of life warning</name>
+                            <type>DEPENDENT</type>
+                            <key>battarey.end_of_life_warning[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <description>enclosure id: {#ENCLOSUREID}&#13;
+canister id: {#CANISTERID}&#13;
+battarey slot: {#BATTAREYSLOT}</description>
+                            <applications>
+                                <application>
+                                    <name>Battarey</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].end_of_life_warning</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclosurebattery.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;&quot;no&quot;</expression>
+                                    <name>Battarei id: {#ID} in enclosure: {#ENCLOSUREID} end_of_life_warning</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Battarey {#ID} percent charged</name>
+                            <type>DEPENDENT</type>
+                            <key>battarey.percent_charged[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <description>enclosure id: {#ENCLOSUREID}&#13;
+canister id: {#CANISTERID}&#13;
+battarey slot: {#BATTAREYSLOT}</description>
+                            <applications>
+                                <application>
+                                    <name>Battarey</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].percent_charged</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclosurebattery.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Battarey {#ID} recondition needed</name>
+                            <type>DEPENDENT</type>
+                            <key>battarey.recondition_needed[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <description>enclosure id: {#ENCLOSUREID}&#13;
+canister id: {#CANISTERID}&#13;
+battarey slot: {#BATTAREYSLOT}</description>
+                            <applications>
+                                <application>
+                                    <name>Battarey</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].recondition_needed</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclosurebattery.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;&quot;no&quot;</expression>
+                                    <name>Battarei id: {#ID} in enclosure: {#ENCLOSUREID} recondition needed</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Battarey {#ID} status</name>
+                            <type>DEPENDENT</type>
+                            <key>battarey.status[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <description>enclosure id: {#ENCLOSUREID}&#13;
+canister id: {#CANISTERID}&#13;
+battarey slot: {#BATTAREYSLOT}</description>
+                            <applications>
+                                <application>
+                                    <name>Battarey</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].status</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclosurebattery.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;&quot;online&quot;</expression>
+                                    <name>Battarei id: {#ID} in enclosure: {#ENCLOSUREID} STATUS IS NOT ONLINE</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <master_item>
+                        <key>ibmflashsyslsenclosurebattery.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Discovery disks</name>
+                    <type>DEPENDENT</type>
+                    <key>discover.disks</key>
+                    <delay>0</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#DISKNAME} id {#ID}</name>
+                            <type>DEPENDENT</type>
+                            <key>disk.status[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <description>use: {#USE}&#13;
+tech type: {#TECHTYPE}&#13;
+capacity: {#CAPACITY}&#13;
+m_disk id: {#MDISKID}&#13;
+member id: {#MEMBERID}&#13;
+enclosure id: {#ENCLOSUREID}&#13;
+slot id: {#SLOTID}&#13;
+node id: {#NODEID}&#13;
+node name: {#NODENAME}&#13;
+auto manage: {#AUTOMANAGE}&#13;
+dirve class id: {#DRIVECLASSID}</description>
+                            <applications>
+                                <application>
+                                    <name>Disk</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].status</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsdrive.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;&quot;online&quot;</expression>
+                                    <name>{#DISKNAME} id {#ID} Become OFFLINE</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <master_item>
+                        <key>ibmflashsyslsdrive.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>discover enclosure</name>
+                    <type>DEPENDENT</type>
+                    <key>discover.enclo</key>
+                    <delay>0</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#TYPE} {#ID} online canisters</name>
+                            <type>DEPENDENT</type>
+                            <key>expansion.online_canisters[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <applications>
+                                <application>
+                                    <name>Enclosure</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].online_canisters</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclo.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#TYPE} {#ID} online fan modules</name>
+                            <type>DEPENDENT</type>
+                            <key>expansion.online_fan_modules[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <applications>
+                                <application>
+                                    <name>Enclosure</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].online_fan_modules</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclo.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#TYPE} {#ID} online PSUs</name>
+                            <type>DEPENDENT</type>
+                            <key>expansion.online_PSUs[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <applications>
+                                <application>
+                                    <name>Enclosure</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].online_PSUs</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclo.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#TYPE} {#ID} online sems</name>
+                            <type>DEPENDENT</type>
+                            <key>expansion.online_sems[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <applications>
+                                <application>
+                                    <name>Enclosure</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].online_sems</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclo.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#TYPE} {#ID} status</name>
+                            <type>DEPENDENT</type>
+                            <key>expansion.stat[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Enclosure</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].status</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclo.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;&quot;online&quot;</expression>
+                                    <name>{#DISKNAME} id {#ID} Become OFFLINE</name>
+                                    <priority>AVERAGE</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#TYPE} {#ID} total canisters</name>
+                            <type>DEPENDENT</type>
+                            <key>expansion.total_canisters[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <applications>
+                                <application>
+                                    <name>Enclosure</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].total_canisters</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclo.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#TYPE} {#ID} total fan modules</name>
+                            <type>DEPENDENT</type>
+                            <key>expansion.total_fan_modules[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <applications>
+                                <application>
+                                    <name>Enclosure</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].total_fan_modules</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclo.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#TYPE} {#ID} total PSUs</name>
+                            <type>DEPENDENT</type>
+                            <key>expansion.total_PSUs[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <applications>
+                                <application>
+                                    <name>Enclosure</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].total_PSUs</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclo.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#TYPE} {#ID} total sems</name>
+                            <type>DEPENDENT</type>
+                            <key>expansion.total_sems[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <applications>
+                                <application>
+                                    <name>Enclosure</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].total_sems</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsenclo.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{IBM FlashSystem 5000 API:expansion.total_canisters[{#ID}].last()}-{IBM FlashSystem 5000 API:expansion.online_canisters[{#ID}].last()}&lt;&gt;0</expression>
+                            <name>{#TYPE} {#ID} online canisters become less than total</name>
+                            <priority>AVERAGE</priority>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{IBM FlashSystem 5000 API:expansion.total_fan_modules[{#ID}].last()}-{IBM FlashSystem 5000 API:expansion.online_fan_modules[{#ID}].last()}&lt;&gt;0</expression>
+                            <name>{#TYPE} {#ID}  online fan modules become less than total</name>
+                            <priority>AVERAGE</priority>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{IBM FlashSystem 5000 API:expansion.total_PSUs[{#ID}].last()}-{IBM FlashSystem 5000 API:expansion.online_PSUs[{#ID}].last()}&lt;&gt;0</expression>
+                            <name>{#TYPE} {#ID} online PSUs become less than total</name>
+                            <priority>AVERAGE</priority>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{IBM FlashSystem 5000 API:expansion.total_sems[{#ID}].last()}-{IBM FlashSystem 5000 API:expansion.online_sems[{#ID}].last()}&lt;&gt;0</expression>
+                            <name>{#TYPE} {#ID}  online sems become less than total</name>
+                            <priority>AVERAGE</priority>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <master_item>
+                        <key>ibmflashsyslsenclo.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Discovery fabric</name>
+                    <type>DEPENDENT</type>
+                    <key>discover.fabric</key>
+                    <delay>0</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Connection {#ID} from port {#LOCALPORT}, wwpn {#LOCALWWPN} to {#REMOTEWWPN}, node name: {#NODENAME} to host {#NAME} state</name>
+                            <type>DEPENDENT</type>
+                            <key>lsfabric.result[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Fabric</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].state</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsfabric.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;&quot;active&quot;</expression>
+                                    <name>Connection {#ID} from port {#LOCALPORT}, node name: {#NODENAME} to host {#NAME} is not active</name>
+                                    <priority>WARNING</priority>
+                                    <description>local wwpn {#LOCALWWPN}&#13;
+remote wwpn {#REMOTEWWPN}</description>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <master_item>
+                        <key>ibmflashsyslsfabric.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Discovery FC</name>
+                    <type>DEPENDENT</type>
+                    <key>discover.fc</key>
+                    <delay>0</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Node: {#NODENAME}  FC port: {#PORTID} status</name>
+                            <type>DEPENDENT</type>
+                            <key>fc.status[{#ID}]</key>
+                            <delay>0</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <description>port speed: {#PORTSPEED}&#13;
+WWPN: {#WWPN}&#13;
+attachment: {#ATTACHMENT}&#13;
+cluster use: {#CLUSTERUSE}&#13;
+adapter location: {#ADAPTERLOCATION}&#13;
+adapter port id: {#ADAPTERPORTID}</description>
+                            <applications>
+                                <application>
+                                    <name>FC</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].status</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsfcport.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;&quot;active&quot;</expression>
+                                    <name>Node: {#NODENAME} FC port: {#PORTID} status Is NOT ACTIVE</name>
+                                    <priority>AVERAGE</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <master_item>
+                        <key>ibmflashsyslsfcport.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Discovery vdisks</name>
+                    <type>DEPENDENT</type>
+                    <key>discover.vdisks</key>
+                    <delay>0</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#NAME} {#ID} status</name>
+                            <type>DEPENDENT</type>
+                            <key>vdisk.status[{#ID}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <description>IO group id: {#IOGRID} &#13;
+ IO group name: {#IOGRNAME} &#13;
+ mdisk grp id: {#MDISKGRID} &#13;
+ mdisk grp name: {#MDISKGRNAME} &#13;
+ capacity: {#CAPACITY} &#13;
+ type: {#TYPE} &#13;
+ FC id: {#FCID} &#13;
+ FC name: {#FCNAME} &#13;
+ RC id: {#RCID} &#13;
+ RC name: {#RCNAME} &#13;
+ vdisk UID: {#VDISKUID} &#13;
+ fc map count: {#FCMAPCOUNT} &#13;
+ copy count: {#COPYCOUNT} &#13;
+ fast write state: {#FSTWRITESTATE} &#13;
+ se copy count: {#SECOPYCOUNT} &#13;
+ RC change: {#RCHANGE} &#13;
+ compressed copy count: {#COMPCOPYCOUNT} &#13;
+ parent mdisk grp id: {#PARENTMDISKGROUPID} &#13;
+ parent mdisk grp name: {#PARENTMDISKGROUPNAME} &#13;
+ owner id: {#OWNERID} &#13;
+ owner name: {#OWNERNAME} &#13;
+ formatting: {#FORMATING} &#13;
+ encrypt: {#ENCRYPT} &#13;
+ volume id: {#VOLID} &#13;
+ volume name: {#VOLNAME} &#13;
+ function: {#FUNCTION} &#13;
+ protocol: {#PROTOCOL}</description>
+                            <applications>
+                                <application>
+                                    <name>VDisk</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[{#ID}].status</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>ibmflashsyslsvdisk.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;&quot;online&quot;</expression>
+                                    <name>{#NAME} {#ID} STATUS BECOME OFFLINE</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <master_item>
+                        <key>ibmflashsyslsvdisk.sh[{$USERNAME},{$PASSWORD},{HOST.IP}]</key>
+                    </master_item>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+</zabbix_export>
